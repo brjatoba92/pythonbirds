@@ -11,8 +11,9 @@ class Pessoa: #Segundo a pep8 classes começa com letra maiuscula
 # p = Pessoa()
 
 if __name__ == "__main__":
-    gustavo = Pessoa(nome = 'Gustavo') 
-    rafael = Pessoa(gustavo, nome = 'Rafael') #gustavo filho do Rafael
+    jatoba = Pessoa(nome = 'Jatoba')
+    gustavo = Pessoa(jatoba, nome = 'Gustavo') 
+    rafael = Pessoa(jatoba, gustavo, nome = 'Rafael') #gustavo filho do Rafael
     print(Pessoa.cumprimentar(rafael))
     print(id(rafael))
     print(rafael.cumprimentar()) #objeto.metodo() ==> ja passa o objeto p implicitamente
