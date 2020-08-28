@@ -20,7 +20,7 @@ if __name__ == "__main__":
     nota_de_corte = int(input('Digite sua pontuação: '))
     candidato = str(input('Informe seu nome:'))
 
-    if 500 < int(nota_de_corte) < 650:
+    if 500 <= int(nota_de_corte) <= 650:
         x = ["meteorologia", "fisica", "matematica"]
     elif  int(nota_de_corte) > 650:
         x = ["direito", "engenharia",  "medicina"]
