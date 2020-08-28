@@ -22,8 +22,10 @@ if __name__ == "__main__":
 
     if 500 < int(nota_de_corte) < 650:
         x = ["meteorologia", "fisica", "matematica"]
-    else:
+    elif  int(nota_de_corte) > 650:
         x = ["direito", "engenharia",  "medicina"]
+    else:
+        x = ["pedagogia", "historia",  "filosofia"]
     print(x)
 
     
@@ -38,6 +40,7 @@ if __name__ == "__main__":
     print('Parabens!!! Você foi aprovado nos seguintes cursos: ')
     for filho in candidato.cursos:
         print(filho.nome)
+    
     """
     str(x[0]) = Enem(nome = 'Jatoba')
     str(x[1]) = Enem(x[0], nome = 'Gustavo') 
