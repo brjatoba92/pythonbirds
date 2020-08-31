@@ -101,7 +101,7 @@ class Carro():
 if __name__ == "__main__":
     motor = Motor() #criando variaveis para as classes
     direcao = Direcao()
-    carro = Carro(direcao, motor)
+    carro = Carro(direcao, motor) #inclusão das classes Direcao e Motor
     #motor
     print(carro.calculando_velocidade()) 
     carro.carro_acelerar() #classe(carro).atributo(carro_acelerar)
