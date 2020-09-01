@@ -8,12 +8,13 @@ E MUDAR PARA DIREITA (VARIAR NO SENTIDO ANTIHORARIO N ==> O, O ==> S, ...)
 """
 #implementando a classe motor ok
 class Motor(): 
-    def __init__(self, velocidade = 0):
+    def __init__(self, velocidade = 0): #__init__ : cria os atributos 
         self.velocidade = velocidade
     def acelerar(self):
         self.velocidade += 1
     def frear(self):
         self.velocidade -= 2
+        self.velocidade = max(0, self.velocidade) #quem for maior entre zero e o valor da velocidade atual
 
 if __name__ == "__main__":
     motor = Motor()
@@ -27,15 +28,16 @@ if __name__ == "__main__":
     motor.frear()
     print(motor.velocidade)
     motor.frear()
-    if motor.velocidade < 1: #incluindo 0 para evitar valores negativos 
-        print(0)
-    #print(motor.velocidade)
+    #if motor.velocidade < 1: #incluindo 0 para evitar valores negativos 
+    #    print(0)
+    print(motor.velocidade)
 
 #implementando a classe direcao ok
+
 class Direcao():
     def __init__ (self):
         self.direcao = 'Norte'
-    
+
     def mudar_a_direita(self): 
         if self.direcao == 'Norte':
             self.direcao = 'Leste'
