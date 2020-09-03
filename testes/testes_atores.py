@@ -113,7 +113,7 @@ class AtorTestes(TestCase):
     def assert_colisao_atores_ativos(self, ator, ator2, intervalo=1):
         """
         Se certifica que há colisão entre atores ativos
-        Atenção: Esse não é método de teste porque nao se inicia com prefixo "text".
+        Atenção: Esse não é método de teste porque nao se inicia com prefixo "test".
         Ele serve apenas para encapsular toda lógica de teste de colisão entre dois atores ativos
         """
         # Conferindo status dos dois atores antes da colisão
@@ -148,7 +148,7 @@ class ObstaculoTestes(TestCase):
     """
     def teste_status(self):
         obstaculo = Obstaculo()
-        self.assertEqual('O', obstaculo.caracter())
+        self.assertEqual('O', obstaculo.caracter()) #aqui
         outro_ator_na_mesma_posicao = Ator()
         obstaculo.colidir(outro_ator_na_mesma_posicao)
         self.assertEqual(' ', obstaculo.caracter())
@@ -160,7 +160,7 @@ class PorcoTestes(TestCase):
     """
     def teste_status(self):
         porco = Porco()
-        self.assertEqual('@', porco.caracter())
+        self.assertEqual('@', porco.caracter()) #aqui
         outro_ator_na_mesma_posicao = Ator()
         porco.colidir(outro_ator_na_mesma_posicao)
         self.assertEqual('+', porco.caracter())
@@ -197,7 +197,7 @@ class PassaroVermelhoTests(PassaroBaseTests):
 
     def teste_status(self):
         passaro_vermelho = PassaroVermelho(1, 1)
-        self.assertEqual('V', passaro_vermelho.caracter())
+        self.assertEqual('V', passaro_vermelho.caracter()) #aqui
         outro_ator_na_mesma_posicao = Ator()
         passaro_vermelho.colidir(outro_ator_na_mesma_posicao)
         self.assertEqual('v', passaro_vermelho.caracter())
@@ -249,7 +249,7 @@ class PassaroAmareloTests(PassaroBaseTests):
 
     def teste_status(self):
         passaro_amarelo = PassaroAmarelo(1, 1)
-        self.assertEqual('A', passaro_amarelo.caracter())
+        self.assertEqual('A', passaro_amarelo.caracter()) #aqui
         outro_ator_na_mesma_posicao = Ator()
         passaro_amarelo.colidir(outro_ator_na_mesma_posicao)
         self.assertEqual('a', passaro_amarelo.caracter())
